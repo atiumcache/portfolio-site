@@ -91,21 +91,25 @@ enableEmoji = true
         identifier = "github"
         name = "GitHub"
         url = "https://github.com/atiumcache"
+        weight = 1
 
       [[languages.en.menu.main]]
         identifier = "upwork"
         name = "UpWork"
         url = "https://www.upwork.com/freelancers/~01c0949163ab365963"
+        weight = 3
 
       [[languages.en.menu.main]]
         identifier = "LinkedIn"
         name = "LinkedIn"
         url = "https://www.linkedin.com/in/andrew-attilio/"
+        weight = 2
 	
       [[languages.en.menu.main]]
         identifier = "resume"
 	      name = "Resume"
 	      url = "/resume-andrew-attilio.pdf"
+        weight = 4
 
 
 [module]

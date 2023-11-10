@@ -1,4 +1,4 @@
-*Hi there! :wave: My name is Andrew. I enjoy solving hard problems, usually by programming a solution. My interests include learning, fitness, food, music, and fantasy literature. I am currently studying Mathematics and Computer Science at NAU.*
+*Hi there! :wave: My name is Andrew. I enjoy solving hard problems, often by programming a solution. My interests include self-education, guitar, fitness, food, and fantasy literature. I am currently studying Mathematics and Computer Science at NAU.*
 
 [Click here for a detailed PDF resume.](resume-andrew-attilio.pdf)
 
@@ -6,7 +6,7 @@
 
 ## Education
 
-:cactus: Northern Arizona University
+:cactus: Northern Arizona Univ.
 
 :school: Mathematics + Computer Science 
 
@@ -49,14 +49,17 @@ A collection of programs that model and solve various mathematical problems.
 
 ## Skills
 
-**Programming** | 
-Python, C, Java, HTML, CSS, Git, Flask, Hugo. 
+**Programming** ---
+Python | C | Java | HTML | CSS | Git | Flask | Hugo. 
 
-**Leadership** |
+**Leadership** ---
 Most of my past work experiences have been in management. Over time, I have adopted a 'lead by example' attitude in all aspects of my life.
 
-**Comunication** |
-I have worked and lived with people from all around the world, which has equipped me with effective and clear communication. In addition, I have worked remotely with both domestic and international teams. 
+**Communication** ---
+I have worked and lived with people from all around the world, which has equipped me with effective and clear communication strategies. In addition, I have worked remotely with both domestic and international teams. 
 
-**Problem Solving** |
-My mathematics and computer science education have equipped me with invaluable problem-solving skills.
+**Problem Solving** ---
+My mathematics and computer science education has equipped me with invaluable problem-solving skills.
+
+**Other** ---
+Guitar | Piano | Cooking | Gardening | Photography
