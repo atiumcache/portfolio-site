@@ -1,4 +1,4 @@
-*Hi there! :wave: My name is Andrew. I enjoy solving hard problems, often by programming a solution. My interests include self-education, guitar, fitness, food, and fantasy literature. I am currently studying Mathematics and Computer Science at NAU.*
+*Hi there! :wave: My name is Andrew. I enjoy solving challenging problems, usually by programming a solution. My interests include education, guitar, fitness, food, and fantasy literature. I am currently studying Mathematics and Computer Science at NAU.*
 
 [Click here for a detailed PDF resume.](resume-andrew-attilio.pdf)
 
@@ -6,9 +6,9 @@
 
 ## Education
 
-:cactus: Northern Arizona Univ.
+:cactus: Northern Arizona University | Flagstaff, AZ
 
-:school: Mathematics + Computer Science 
+:school: Mathematics Major | Computer Science Minor 
 
 :graduation_cap: Graduating Spring '25
 
@@ -20,7 +20,7 @@
 
 :cook: Restaurant Manager | Chef
 
-:hotel: Resort + Hotel Manager
+:hotel: Resort | Hotel Manager
 
 -----
 
@@ -28,14 +28,13 @@
 
 #### *Flavor Pairings Web App*
 
-Provides flavor pairing advice based on a user’s inputted ingredient. Utilizes Python, Flask, HTML, and CSS. The program takes in a large collection of food data, cleans and organizes it, and provides the user with accurate, well-formatted recommendations.
+A Flask web app that provides flavor pairing advice based on a user’s inputted ingredient. Utilizes Python, Flask, HTML, and CSS. The program takes in a large collection of food data, cleans and organizes it, and provides the user with accurate, well-formatted recommendations.
 
 [View on GitHub](https://github.com/atiumcache/flavor-pairings-website)
 
 #### *E-Reader Simulation*
 
-A simple representation of an eBook reader that works with Project Gutenberg. The program allows the
-user to simulate viewing a bookstore, ’purchasing’ books, and reading them on Project Gutenburg. 
+A Python program that models an eBook reader and works with Project Gutenberg. The program is a simulation that allows the user to view an online bookstore, purchase books, and read them on Project Gutenburg. 
 
 [View on GitHub](https://github.com/atiumcache/ereader/)
 
@@ -50,16 +49,10 @@ A collection of programs that model and solve various mathematical problems.
 ## Skills
 
 **Programming** ---
-Python | C | Java | HTML | CSS | Git | Flask | Hugo. 
+Python | C | Java | HTML | CSS | Git | Flask | Hugo 
 
-**Leadership** ---
-Most of my past work experiences have been in management. Over time, I have adopted a 'lead by example' attitude in all aspects of my life.
-
-**Communication** ---
-I have worked and lived with people from all around the world, which has equipped me with effective and clear communication strategies. In addition, I have worked remotely with both domestic and international teams. 
-
-**Problem Solving** ---
-My mathematics and computer science education has equipped me with invaluable problem-solving skills.
+**Essentials** ---
+Leadership | Clear Communication | Problem Solving 
 
 **Other** ---
 Guitar | Piano | Cooking | Gardening | Photography
