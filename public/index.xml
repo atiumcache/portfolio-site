@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Andrew Attilio</title>
+    <link>/</link>
+    <description>Recent content on Andrew Attilio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2023 Andrew Attilio</copyright>
+    <lastBuildDate>Thu, 09 Nov 2023 14:10:55 -0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>/posts/problem-solving-methods/</link>
+      <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/posts/problem-solving-methods/</guid>
+      <description>Testing This is a test.</description>
+      <content>&lt;h1 id=&#34;testing&#34;&gt;Testing&lt;/h1&gt;
+&lt;p&gt;This is a test.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/projects/ereader-sim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/ereader-sim/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/projects/math-models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/math-models/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Flavor Pairings Web App</title>
+      <link>/projects/flavor-pairings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/flavor-pairings/</guid>
+      <description>A project&amp;hellip;
+The Code ohfoidaf</description>
+      <content>&lt;p&gt;A project&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;the-code&#34;&gt;The Code&lt;/h2&gt;
+&lt;p&gt;ohfoidaf&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
