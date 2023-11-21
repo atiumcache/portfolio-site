@@ -26,23 +26,23 @@
 
 ## Projects
 
-#### *Flavor Pairings Web App*
+#### *The Game of Life* :dna:
+
+A simple terminal-based implementation of John Conway's Game of Life. The 'game' plays itself, simulating an evolving cellular world. This is a classic example of cellular automata, mathematical modeling, and artificial life. 
+
+[View on Github](https://github.com/atiumcache/game_of_life/)
+
+#### *Flavor Pairings Web App* :avocado:
 
 A Flask web app that provides flavor pairing advice based on a user’s inputted ingredient. Utilizes Python, Flask, HTML, and CSS. The program takes in a large collection of food data, cleans and organizes it, and provides the user with accurate, well-formatted recommendations.
 
 [View on GitHub](https://github.com/atiumcache/flavor-pairings-website)
 
-#### *E-Reader Simulation*
+#### *E-Reader Simulation* :book:
 
 A Python program that models an eBook reader and works with Project Gutenberg. The program is a simulation that allows the user to view an online bookstore, purchase books, and read them on Project Gutenburg. 
 
 [View on GitHub](https://github.com/atiumcache/ereader/)
-
-#### *Mathematical Models*
-
-A collection of programs that model and solve various mathematical problems.
-
-[View PDF](/mathematical-models.pdf)
 
 ----
 
