@@ -111,11 +111,11 @@ enableEmoji = true
 	      url = "/dsa"
         weight = 5
 
-        [[languages.en.menu.main]]
-        identifier = "code-alongs"
-	      name = "Code-Alongs"
-	      url = "/code-alongs"
-        weight = 6
+       # [[languages.en.menu.main]]
+       # identifier = "code-alongs"
+	     # name = "Code-Alongs"
+	     # url = "/code-alongs"
+       # weight = 6
 
         [[languages.en.menu.main]]
         identifier = "math-models"

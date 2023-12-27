@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   
-    <title> :: Andrew Attilio</title>
+    <title>Group Anagrams --- Solution and Analysis :: Andrew Attilio</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<meta name="description" content="Solution and analysis for the Group Anagrams Leetcode problem." />
+<meta name="keywords" content=", " />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="/projects/math-models/" />
+<link rel="canonical" href="/dsa/group-anagrams/" />
 
 
 
@@ -47,18 +47,20 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="">
-<meta property="og:description" content="" />
-<meta property="og:url" content="/projects/math-models/" />
+<meta property="og:title" content="Group Anagrams --- Solution and Analysis">
+<meta property="og:description" content="Solution and analysis for the Group Anagrams Leetcode problem." />
+<meta property="og:url" content="/dsa/group-anagrams/" />
 <meta property="og:site_name" content="Andrew Attilio" />
 
   
-    <meta property="og:image" content="/img/favicon/blue.png">
   
+  <meta property="og:image" content="/">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 
+
+  <meta property="article:published_time" content="2023-11-11 14:10:55 -0700 MST" />
 
 
 
@@ -170,17 +172,49 @@
     
 <article class="post">
   <h1 class="post-title">
-    <a href="/projects/math-models/"></a>
+    <a href="/dsa/group-anagrams/">Group Anagrams &mdash; Solution and Analysis</a>
   </h1>
-  <div class="post-meta"></div>
+  <div class="post-meta"><time class="post-date">2023-11-11</time><span class="post-author">Andrew Attilio</span></div>
 
+  
+    <span class="post-tags">
+      
+      #<a href="/tags/dsa/">dsa</a>&nbsp;
+      
+      #<a href="/tags/arrays/">arrays</a>&nbsp;
+      
+    </span>
   
   
 
 
   
 
-  <div class="post-content"></div>
+  <div class="post-content"><div>
+        <h2 id="the-challenge">The Challenge<a href="#the-challenge" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Given an array of strings strs, group the anagrams together. You can return the answer in any order.</p>
+<p>An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</p>
+<pre tabindex="0"><code>Example 1:
+Input: strs = [&#34;eat&#34;,&#34;tea&#34;,&#34;tan&#34;,&#34;ate&#34;,&#34;nat&#34;,&#34;bat&#34;]
+Output: [[&#34;bat&#34;],[&#34;nat&#34;,&#34;tan&#34;],[&#34;ate&#34;,&#34;eat&#34;,&#34;tea&#34;]]
+
+Example 2:
+Input: strs = [&#34;&#34;]
+Output: [[&#34;&#34;]]
+</code></pre><h3 id="solution">Solution<a href="#solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>We start by creating a dictionary that maps a collection of letters to all of the words in the list that match as anagrams. We iterate through each word in the list and sort it. Then, we append that word to the list value for the key that matches the sorted version for the word.</p>
+<p>To finish, we return a list of the values in our map.</p>
+<pre tabindex="0"><code>class Solution(object):
+def groupAnagrams(self, strs):
+    sorted_map = defaultdict(list)
+
+    for word in strs:
+        sorted_word = &#39;&#39;.join(sorted(word))
+        sorted_map[sorted_word].append(word)
+
+    return list(sorted_map.values())
+</code></pre>
+      </div></div>
 
   
 

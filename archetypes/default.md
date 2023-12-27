@@ -1,8 +1,3 @@
----
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true
-
 +++
 title = "Contains Duplicate --- Leetcode Solution and Analysis"
 date = "2023-11-09T14:10:55-07:00"

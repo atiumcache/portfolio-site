@@ -7,18 +7,122 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2023 Andrew Attilio</copyright>
-    <lastBuildDate>Thu, 09 Nov 2023 14:10:55 -0700</lastBuildDate><atom:link href="/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Nov 2023 14:10:55 -0700</lastBuildDate><atom:link href="/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Two Sum</title>
+      <title>Group Anagrams --- Solution and Analysis</title>
+      <link>/dsa/group-anagrams/</link>
+      <pubDate>Sat, 11 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/dsa/group-anagrams/</guid>
+      <description>The Challenge Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+Example 1: Input: strs = [&amp;#34;eat&amp;#34;,&amp;#34;tea&amp;#34;,&amp;#34;tan&amp;#34;,&amp;#34;ate&amp;#34;,&amp;#34;nat&amp;#34;,&amp;#34;bat&amp;#34;] Output: [[&amp;#34;bat&amp;#34;],[&amp;#34;nat&amp;#34;,&amp;#34;tan&amp;#34;],[&amp;#34;ate&amp;#34;,&amp;#34;eat&amp;#34;,&amp;#34;tea&amp;#34;]] Example 2: Input: strs = [&amp;#34;&amp;#34;] Output: [[&amp;#34;&amp;#34;]] Solution We start by creating a dictionary that maps a collection of letters to all of the words in the list that match as anagrams.</description>
+      <content>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;
+&lt;p&gt;Given an array of strings strs, group the anagrams together. You can return the answer in any order.&lt;/p&gt;
+&lt;p&gt;An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Example 1:
+Input: strs = [&amp;#34;eat&amp;#34;,&amp;#34;tea&amp;#34;,&amp;#34;tan&amp;#34;,&amp;#34;ate&amp;#34;,&amp;#34;nat&amp;#34;,&amp;#34;bat&amp;#34;]
+Output: [[&amp;#34;bat&amp;#34;],[&amp;#34;nat&amp;#34;,&amp;#34;tan&amp;#34;],[&amp;#34;ate&amp;#34;,&amp;#34;eat&amp;#34;,&amp;#34;tea&amp;#34;]]
+
+Example 2:
+Input: strs = [&amp;#34;&amp;#34;]
+Output: [[&amp;#34;&amp;#34;]]
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;p&gt;We start by creating a dictionary that maps a collection of letters to all of the words in the list that match as anagrams. We iterate through each word in the list and sort it. Then, we append that word to the list value for the key that matches the sorted version for the word.&lt;/p&gt;
+&lt;p&gt;To finish, we return a list of the values in our map.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class Solution(object):
+def groupAnagrams(self, strs):
+    sorted_map = defaultdict(list)
+
+    for word in strs:
+        sorted_word = &amp;#39;&amp;#39;.join(sorted(word))
+        sorted_map[sorted_word].append(word)
+
+    return list(sorted_map.values())
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Contains Duplicate --- Solution and Analysis</title>
+      <link>/dsa/contains-duplicate/</link>
+      <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/dsa/contains-duplicate/</guid>
+      <description>The Challenge Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+Example 1: Input: nums = [1,2,3,1] Output: true Example 2: Input: nums = [1,2,3,4] Output: false Example 3: Input: nums = [1,1,1,3,3,4,3,2,4,2] Output: true Solution This is a rather simple problem to solve in O(n) time. First, we create a set that tracks the numbers we have seen.</description>
+      <content>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;
+&lt;p&gt;Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Example 1:
+
+Input: nums = [1,2,3,1]
+Output: true
+
+Example 2:
+
+Input: nums = [1,2,3,4]
+Output: false
+
+Example 3:
+
+Input: nums = [1,1,1,3,3,4,3,2,4,2]
+Output: true
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;p&gt;This is a rather simple problem to solve in O(n) time. First, we create a set that tracks the numbers we have seen. For each number in the list, we check it against the list. If its in the list, we found a duplicate. If not, we add it to the seen set and continue iterating.&lt;/p&gt;
+&lt;p&gt;If we make it all the way through, we return False.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class Solution(object):
+def containsDuplicate(self, nums):
+    has_appeared = set()
+    for i in nums:
+        if i in has_appeared:
+            return True
+        has_appeared.add(i)
+    return False
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Reverse Linked List --- Solution and Analysis</title>
+      <link>/dsa/reverse-linked-list/</link>
+      <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/dsa/reverse-linked-list/</guid>
+      <description>The Challenge Given the head of a singly linked list, reverse the list, and return the reversed list.
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, val=0, next=None): # self.val = val # self.next = next Some built-in Node functions are defined in the comments. When the head is passed in, it is pointing to the next node in the list, and so on. The end of the list is reached when a node&amp;rsquo;s next value is None/NULL.</description>
+      <content>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;
+&lt;p&gt;Given the head of a singly linked list, reverse the list, and return the reversed list.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Some built-in Node functions are defined in the comments. When the head is passed in, it is pointing to the next node in the list, and so on. The end of the list is reached when a node&amp;rsquo;s next value is None/NULL. Therefore, we set the prev node to NULL initially, so that when we reverse-engineer, the head will be the new end of the list.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;We keep track of the current node, starting with the head. While the current head != None (in other words, while we haven&amp;rsquo;t passed the end of the list), we make next a temporary pointer to the current&amp;rsquo;s next. Then, with current.next freed up by the temp pointer, we point current.next to the prev node. In the case of head, it is now pointing to NULL. Then, we change prev to the current node (so, in case 1, the head is now the previous node). Finally, we move our current node to the next in the list.&lt;/p&gt;
+&lt;p&gt;Once current passes the last node and reaches NULL, we return that last node (which is now pointed to by prev). This returns a reversed list, where the originally-last node is now the head, and each &amp;rsquo;next&amp;rsquo; is pointing &amp;lsquo;backwards&amp;rsquo; in regards to the original list.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class Solution(object):
+    def reverseList(self, head):
+        prev = None
+        current = head
+        while current != None:
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        return prev
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Two Sum --- Solution and Analysis</title>
       <link>/dsa/two-sum/</link>
       <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
       
       <guid>/dsa/two-sum/</guid>
-      <description>Two Sum Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+      <description>The Challenge Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 You can return the answer in any order.
 Solution The naive approach is nested for loops, where we iterate through each element i and compare it to each element j.</description>
-      <content>&lt;h1 id=&#34;two-sum&#34;&gt;Two Sum&lt;/h1&gt;
+      <content>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;
 &lt;p&gt;Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.&lt;/p&gt;
 &lt;p&gt;You may assume that each input would have exactly one solution, and you may not use the same element twice.&lt;/p&gt;
 &lt;p&gt;You can return the answer in any order.&lt;/p&gt;
@@ -36,6 +140,46 @@ def twoSum(self, nums, target):
 
     return [] # no matches
 &lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Valid Parantheses --- Solution and Analysis</title>
+      <link>/dsa/valid-parantheses/</link>
+      <pubDate>Tue, 24 Oct 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/dsa/valid-parantheses/</guid>
+      <description>The Challenge Given a string s containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.
+An input string is valid if:
+ Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Every close bracket has a corresponding open bracket of the same type.  Solution class Solution(object): def isValid(self, s): stack = [] pairs = { &amp;#39;(&amp;#39;: &amp;#39;)&amp;#39;, &amp;#39;{&amp;#39;: &amp;#39;}&amp;#39;, &amp;#39;[&amp;#39;: &amp;#39;]&amp;#39; } for bracket in s: if bracket in pairs: stack.</description>
+      <content>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;
+&lt;p&gt;Given a string s containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.&lt;/p&gt;
+&lt;p&gt;An input string is valid if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open brackets must be closed by the same type of brackets.&lt;/li&gt;
+&lt;li&gt;Open brackets must be closed in the correct order.&lt;/li&gt;
+&lt;li&gt;Every close bracket has a corresponding open bracket of the same type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class Solution(object):
+    def isValid(self, s):
+        stack = []
+        pairs = {
+            &amp;#39;(&amp;#39;: &amp;#39;)&amp;#39;,
+            &amp;#39;{&amp;#39;: &amp;#39;}&amp;#39;,
+            &amp;#39;[&amp;#39;: &amp;#39;]&amp;#39;
+        }
+
+        for bracket in s:
+            if bracket in pairs:
+                stack.append(bracket)
+            elif len(stack) == 0 or bracket != pairs[stack.pop()]:
+                return False
+
+        return len(stack) == 0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is a clear-cut problem where a stack is an intuitive solution. We initialize an empty stack and iterate through the list of brackets. If it is a left bracket, denoted by it being a key in the dictionary, then we append to the stack.&lt;/p&gt;
+&lt;p&gt;If it is not a left, then it must be a right bracket. Therefore, we check if the stack is empty (which makes this an invalid bracket) or if the bracket in question pairs does &lt;em&gt;not&lt;/em&gt; pair with the most recent bracket on the stack (which we pop off simultaneously).&lt;/p&gt;
+&lt;p&gt;If we get to the end and the stack is empty, the return statement will be True. Otherwise, it will be False.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     
   </channel>

@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   
-    <title> :: Andrew Attilio</title>
+    <title>Valid Parantheses --- Solution and Analysis :: Andrew Attilio</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<meta name="description" content="Solution and analysis for the Valid Parantheses Leetcode problem." />
+<meta name="keywords" content=", " />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="/projects/math-models/" />
+<link rel="canonical" href="/dsa/valid-parantheses/" />
 
 
 
@@ -47,18 +47,20 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="">
-<meta property="og:description" content="" />
-<meta property="og:url" content="/projects/math-models/" />
+<meta property="og:title" content="Valid Parantheses --- Solution and Analysis">
+<meta property="og:description" content="Solution and analysis for the Valid Parantheses Leetcode problem." />
+<meta property="og:url" content="/dsa/valid-parantheses/" />
 <meta property="og:site_name" content="Andrew Attilio" />
 
   
-    <meta property="og:image" content="/img/favicon/blue.png">
   
+  <meta property="og:image" content="/">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 
+
+  <meta property="article:published_time" content="2023-10-24 14:10:55 -0700 MST" />
 
 
 
@@ -170,17 +172,55 @@
     
 <article class="post">
   <h1 class="post-title">
-    <a href="/projects/math-models/"></a>
+    <a href="/dsa/valid-parantheses/">Valid Parantheses &mdash; Solution and Analysis</a>
   </h1>
-  <div class="post-meta"></div>
+  <div class="post-meta"><time class="post-date">2023-10-24</time><span class="post-author">Andrew Attilio</span></div>
 
+  
+    <span class="post-tags">
+      
+      #<a href="/tags/dsa/">dsa</a>&nbsp;
+      
+      #<a href="/tags/arrays/">arrays</a>&nbsp;
+      
+    </span>
   
   
 
 
   
 
-  <div class="post-content"></div>
+  <div class="post-content"><div>
+        <h2 id="the-challenge">The Challenge<a href="#the-challenge" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Given a string s containing just the characters &lsquo;(&rsquo;, &lsquo;)&rsquo;, &lsquo;{&rsquo;, &lsquo;}&rsquo;, &lsquo;[&rsquo; and &lsquo;]&rsquo;, determine if the input string is valid.</p>
+<p>An input string is valid if:</p>
+<ul>
+<li>Open brackets must be closed by the same type of brackets.</li>
+<li>Open brackets must be closed in the correct order.</li>
+<li>Every close bracket has a corresponding open bracket of the same type.</li>
+</ul>
+<h2 id="solution">Solution<a href="#solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code>class Solution(object):
+    def isValid(self, s):
+        stack = []
+        pairs = {
+            &#39;(&#39;: &#39;)&#39;,
+            &#39;{&#39;: &#39;}&#39;,
+            &#39;[&#39;: &#39;]&#39;
+        }
+
+        for bracket in s:
+            if bracket in pairs:
+                stack.append(bracket)
+            elif len(stack) == 0 or bracket != pairs[stack.pop()]:
+                return False
+
+        return len(stack) == 0
+</code></pre><p>This is a clear-cut problem where a stack is an intuitive solution. We initialize an empty stack and iterate through the list of brackets. If it is a left bracket, denoted by it being a key in the dictionary, then we append to the stack.</p>
+<p>If it is not a left, then it must be a right bracket. Therefore, we check if the stack is empty (which makes this an invalid bracket) or if the bracket in question pairs does <em>not</em> pair with the most recent bracket on the stack (which we pop off simultaneously).</p>
+<p>If we get to the end and the stack is empty, the return statement will be True. Otherwise, it will be False.</p>
+<pre tabindex="0"><code></code></pre>
+      </div></div>
 
   
 
