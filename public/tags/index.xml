@@ -5,7 +5,28 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Andrew Attilio</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>2023 Andrew Attilio</copyright><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>2023 Andrew Attilio</copyright>
+    <lastBuildDate>Thu, 09 Nov 2023 14:10:55 -0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>arrays</title>
+      <link>/tags/arrays/</link>
+      <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/tags/arrays/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>dsa</title>
+      <link>/tags/dsa/</link>
+      <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/tags/dsa/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
   </channel>
 </rss>

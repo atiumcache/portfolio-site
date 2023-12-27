@@ -4,11 +4,27 @@
   <url>
     <loc>/</loc>
     <lastmod>2023-11-09T14:10:55-07:00</lastmod>
+    <priority>0</priority>
   </url><url>
     <loc>/posts/problem-solving-methods/</loc>
     <lastmod>2023-11-09T14:10:55-07:00</lastmod>
   </url><url>
+    <loc>/tags/arrays/</loc>
+    <lastmod>2023-11-09T14:10:55-07:00</lastmod>
+  </url><url>
+    <loc>/tags/dsa/</loc>
+    <lastmod>2023-11-09T14:10:55-07:00</lastmod>
+  </url><url>
+    <loc>/dsa/</loc>
+    <lastmod>2023-11-09T14:10:55-07:00</lastmod>
+  </url><url>
     <loc>/posts/</loc>
+    <lastmod>2023-11-09T14:10:55-07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-11-09T14:10:55-07:00</lastmod>
+  </url><url>
+    <loc>/dsa/two-sum/</loc>
     <lastmod>2023-11-09T14:10:55-07:00</lastmod>
   </url><url>
     <loc>/projects/ereader-sim/</loc>
@@ -20,7 +36,5 @@
     <loc>/projects/flavor-pairings/</loc>
   </url><url>
     <loc>/projects/</loc>
-  </url><url>
-    <loc>/tags/</loc>
   </url>
 </urlset>
