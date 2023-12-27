@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>modeling on Andrew Attilio</title>
+    <link>/tags/modeling/</link>
+    <description>Recent content in modeling on Andrew Attilio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2023 Andrew Attilio</copyright>
+    <lastBuildDate>Thu, 09 Nov 2023 14:10:55 -0700</lastBuildDate><atom:link href="/tags/modeling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Jelly Bean Probablity Model</title>
+      <link>/math-models/jelly-beans/</link>
+      <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/math-models/jelly-beans/</guid>
+      <description>Jelly Bean Probability In this problem, we are exploring the most probable outcome after a jelly bean experiment. The experiment proceeds as follows:
+  Stir together 2023 red jelly beans and 2023 green jelly beans.
+  Pull 3 jelly beans out of the jar at a time.
+  If they are all the same color, eat all 3 jelly beans.
+  If there are 2 of one color, eat 1 of the majority color and put the other 2 jelly beans back in the jar.</description>
+      <content>&lt;h2 id=&#34;jelly-bean-probability&#34;&gt;Jelly Bean Probability&lt;/h2&gt;
+&lt;p&gt;In this problem, we are exploring the most probable outcome
+after a jelly bean experiment. The experiment proceeds as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Stir together 2023 red jelly beans and 2023 green jelly beans.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pull 3 jelly beans out of the jar at a time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If they are all the same color, eat all 3 jelly beans.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If there are 2 of one color, eat 1 of the majority color and put the
+other 2 jelly beans back in the jar.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After following this process, there are 4 distinct ways for the
+experiment to end:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;No beans.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One bean (either color is equally probable).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Two beans of the same color (either color is equally probable).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One red and one green.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Calculating the probabilities of hundreds of consecutive
+draws seemed impossibly complicated, so I coded a Python program that
+simulates the stated problem, drawing three beans at a time until no
+more than 2 remain.&lt;/p&gt;
+&lt;p&gt;The code for my &lt;code&gt;bean_jar_experiment()&lt;/code&gt; function is listed below. There
+are two global variables, &lt;code&gt;red_count&lt;/code&gt; and &lt;code&gt;green_count&lt;/code&gt;. The
+&lt;code&gt;bean_jar_experiment()&lt;/code&gt; continuously calls the &lt;code&gt;draw_beans&lt;/code&gt; function
+until there are 2 or less beans left in the virtual jar. Each instance
+of &lt;code&gt;draw_beans&lt;/code&gt; generates three random numbers, each of which
+corresponds to either a red or green bean. Depending on the results of
+the 3 randomly-generated beans, the function subtracts the proper amount
+of beans from &lt;code&gt;red_count&lt;/code&gt; or &lt;code&gt;green_count&lt;/code&gt;, simulating consumption of
+those beans. The &lt;code&gt;draw_count&lt;/code&gt; is initialized to 0, and I simulated each
+red bean as $-1$ for the &lt;code&gt;draw_count&lt;/code&gt; and each green bean as $+1$. For
+example, the following line represents consuming three red beans, given
+that the &lt;code&gt;draw_count&lt;/code&gt; is equal to -3:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    case (-3): # all red
+            red_count -= 3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The following is the full code for the program:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;red_count = 2023    
+green_count = 2023
+
+def bean_jar_experiment():  
+    while (red_count + green_count) &amp;gt; 2:
+        draw_beans(red_count, green_count)
+
+    print(&amp;#39;Red: &amp;#39;, red_count)
+    print(&amp;#39;Green: &amp;#39;, green_count)
+
+def draw_beans(red, green):
+    global red_count
+    global green_count
+
+    draw_count = 0 # if &amp;lt; 0: red, if &amp;gt; 0: green
+    for i in range(3):
+        random_int = randint(1, (red + green))
+        if random_int &amp;lt;= red:
+            draw_count -= 1
+        else: 
+            draw_count += 1
+    match draw_count:
+        case (-3): # all red
+            red_count -= 3
+        case (-1): # 2 red, 1 green
+            red_count -= 1
+        case (1): # 2 green, 1 red
+            green_count -= 1
+        case (3): # all green
+            green_count -= 3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Great, but this would be most useful by running the program hundreds,
+thousands, or millions of times and collecting all of the results. Let&amp;rsquo;s
+do that.&lt;/p&gt;
+&lt;p&gt;I created a dictionary for the program that stores the results of each
+occurrence of the &lt;code&gt;bean_jar_experiment&lt;/code&gt; function. The mappings are based
+on the 4 cases ${a, b, c, d}$ defined in the intro section of this
+paper. The initial dictionary is:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    results = {&amp;#39;a&amp;#39;: 0, &amp;#39;b&amp;#39;: 0, &amp;#39;c&amp;#39;: 0, &amp;#39;d&amp;#39;: 0}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Each time the program runs, it will add 1 to the corresponding case
+result. I ran the program 1000 times, then 10000 times, then 100000
+times. Here are the results:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    RESULTS FROM 10000 EXPERIMENTS
+    {&amp;#39;a&amp;#39;: 1057, &amp;#39;b&amp;#39;: 3335, &amp;#39;c&amp;#39;: 2885, &amp;#39;d&amp;#39;: 2723}
+    Runtime: 72.10 seconds
+
+    RESULTS FROM 100000 EXPERIMENTS:
+    {&amp;#39;a&amp;#39;: 10258, &amp;#39;b&amp;#39;: 33810, &amp;#39;c&amp;#39;: 28834, &amp;#39;d&amp;#39;: 27098}
+    Runtime: 754.85 seconds
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The results are consistent. According to the Python program, &lt;strong&gt;case 2
+is most likely to occur&lt;/strong&gt;, which corresponds to ending with either one
+green or one red bean in the jar. &lt;strong&gt;Case 1 is the least likely
+outcome&lt;/strong&gt;, which is the case in which we end with no beans.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s consider the data from running the experiment 100000 times. The
+probabilities of each case are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;No beans = &lt;strong&gt;10.3%&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One bean = &lt;strong&gt;33.8%&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Two beans of the same color = &lt;strong&gt;28.8%&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One red and one green = &lt;strong&gt;27.1%&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

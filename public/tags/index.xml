@@ -28,5 +28,35 @@
       <content></content>
     </item>
     
+    <item>
+      <title>modeling</title>
+      <link>/tags/modeling/</link>
+      <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/tags/modeling/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>statistics</title>
+      <link>/tags/statistics/</link>
+      <pubDate>Thu, 09 Nov 2023 14:10:55 -0700</pubDate>
+      
+      <guid>/tags/statistics/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
   </channel>
 </rss>
